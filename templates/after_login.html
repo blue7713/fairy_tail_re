@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
+    
     <title>1시경 창작 동화</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/jumbotron/">
@@ -106,6 +107,11 @@
       .moving:hover{
         transform: translate(0, -5px);
       }
+
+      .font{
+        font-weight: 540;
+        font-size: 16px;
+      }
     </style>
   </head>
   <body>  
@@ -119,8 +125,8 @@
               <div class="subscription-info me-3" id="subscription-info">
                 <span><span id="subscription-amount"></span></span><!--구독정보 표시-->
               </div>
-              <span class="me-3">보유 크레딧: <span id="credit-amount">0</span></span>
-              <button type="button" class="btn btn-outline-dark" onclick="location.href='/home/logout'">logout</button>
+              <span class="me-3 font">보유 크레딧: <span id="credit-amount">0</span></span>
+              <button type="button" class="btn btn-outline-dark font" onclick="location.href='/home/logout'">logout</button>
             </div>
           </div>
         </header>
