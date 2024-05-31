@@ -35,6 +35,10 @@ def pricing():
 def fairy_list():
     return render_template('fairy_list.html')
 
+@web_test.route('/page_view')
+def page_view():
+    return render_template('page_view.html')
+
 @web_test.route('/check', methods=['POST']) # 유저정보 확인
 def check():
     error = None

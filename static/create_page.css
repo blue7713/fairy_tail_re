@@ -43,7 +43,7 @@
   header {
     width: 100%;
     height: 60px;
-    background-color: #fff;
+    background-color: #F7F8FC;
     position: fixed;
     top: 0;
     left: 0;
@@ -75,7 +75,7 @@
   }
   
   .title-container {
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 20px;
   }
   
@@ -86,83 +86,63 @@
     margin-bottom: 0.8rem;
   }
 
-  .skill-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem 0;
-  }
-  
-  .roadmap-container {
-    width: 100%;
-    margin-top: 2rem;
-  }
-  
-  .roadmap-title-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .roadmap-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #545e6f;
-  }
-  
-  .slide-prev {
-    font-size: 2rem;
+  /* Controller Buttons */
+  .button_left {
+    position: absolute;
+    left: 0;
+    margin: 0;
+    top: 55%;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
-    color: rgb(47, 48, 89);
+    z-index: 100;
   }
-  
-  .slide-next {
-    font-size: 2rem;
+
+  .button_right {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    top: 55%;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
-    color: #cfd8dc;
+    z-index: 100;
   }
-  
-  .slide-prev-hover:hover {
-    transition: transform 0.5s;
-    transform: translateX(-2px);
+
+  button:focus {
+    outline: none;
   }
-  
-  .slide-next-hover:hover {
-    transition: transform 0.5s;
-    transform: translateX(2px);
+
+  button:hover i {
+    color: #636363;
   }
-  
-  .arrow-container {
-    display: flex;
+
+  i {
+    font-size: 50px;
+    color: gray;
   }
-  
-  .class-list {
+
+  .select-category {
     display: flex;
     list-style: none;
     padding: 1rem 0;
     margin: 0;
-    overflow: none;
+    justify-content: center;
+    border-bottom: 2px solid rgb(87, 136, 209);
   }
   
   .class-card {
-    width: 300px;
-    box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+    width: 140px;
     border-radius: 8px;
-    margin: 0 10px;
-    transition: 0.4s;
+    margin: 0 30px;
     flex-shrink: 0;
+    border-bottom: 2px solid rgb(87, 136, 209);
+    border-top: 2px solid rgb(87, 136, 209);
   }
-  
-  .class-card:hover {
-    box-shadow: 10px 10px 10px 0px rgba(25, 42, 70, 0.2);
-    transform: translate(0, -5px);
-  }
-  
+
   .class-image {
-    max-width: 300px;
+    max-width: 150x;
+    max-height: 150px;
     border-radius: 8px 8px 0 0;
     object-fit: contain;
   }
@@ -174,7 +154,6 @@
   
   .class-desc {
     width: 100%;
-    margin-top: 0.5rem;
     color: #545e6f;
   }
   
@@ -189,39 +168,52 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 0.5rem;
+    justify-content: center;
+    display: flex;
+    margin-top: 0rem;
   }
-  
-  .roadmap-desc {
-    display: visible;
+
+  .select-container {
+    border-top: black ;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .select-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1.5rem 0;
+    margin: 0;
+    overflow: none;
+  }
+
+  .select-card {
+    width: 200px;
+    border-radius: 8px;
+    margin: 0 30px;
+    flex-shrink: 0;
+    border-bottom: 2px solid rgb(87, 136, 209);
+    border-top: 2px solid rgb(87, 136, 209);
+  }
+
+  .select-image {
+    max-width: 200x;
+    max-height: 200px;
+    border-radius: 8px 8px 0 0;
+    object-fit: contain;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: 100px;
+    border-top: 2px solid rgb(87, 136, 209);
   }
   
   li a:hover {
     cursor: pointer;
-  }
-  
-  footer {
-    border-top: 1px solid #e4e4e4;
-    background-color: #f8f9fa;
-    padding: 1rem 0;
-    margin: 1rem 0;
-  }
-  
-  #backtotop {
-    background-color: rgb(47, 48, 89);
-    width: 40px;
-    height: 40px;
-    text-align: center;
-  
-    border-radius: 20px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    transition-property: background-color, opacity, visibility;
-    transition-duration: 0.3s, 0.5s, 0.5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 999;
   }
   
   ul li img:hover {
@@ -238,12 +230,11 @@
     }
   }
   
-  @media only screen and (max-width: 980px) {
-    .skill-container {
-      display: none;
+  @media only screen and (min-width: 1200px) {
+    .button_left {
+      margin-left: 250px;
     }
-    .roadmap-desc {
-      display: none;
+    .button_right {
+      margin-right: 250px;
     }
   }
-  
