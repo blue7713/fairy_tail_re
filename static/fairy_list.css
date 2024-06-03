@@ -207,22 +207,6 @@
     margin: 1rem 0;
   }
   
-  #backtotop {
-    background-color: rgb(47, 48, 89);
-    width: 40px;
-    height: 40px;
-    text-align: center;
-  
-    border-radius: 20px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    transition-property: background-color, opacity, visibility;
-    transition-duration: 0.3s, 0.5s, 0.5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 999;
-  }
   
   ul li img:hover {
     cursor: grab; 
